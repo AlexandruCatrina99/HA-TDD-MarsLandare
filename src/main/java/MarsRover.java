@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 public interface MarsRover {
-    void move(String commands) throws InvalidCommandException;
+    void move(String commands) throws InvalidCommandException, ObstacleException;
     Point2d getCurrentPosition();
-    Direction getCurrentDirection();
+    void setObstacles(Obstacles obstacles);
 }
