@@ -18,14 +18,14 @@ public class MarsRoverImpl implements MarsRover {
                     if (moveForward()) {
                         commandsExecuted.append("f");
                     } else {
-                        throw new ObstacleException("Stopped!!! There is an obstacle in front of me!");
+                        throw new ObstacleException("Stopped!!! There is an obstacle in front of me!, Successfully done : " + commandsExecuted);
                     }
                 }
                 case 'b' -> {
                     if (moveBackwards()) {
                         commandsExecuted.append("b");
                     } else {
-                        throw new ObstacleException("Stopped!!! There is an obstacle back of me!");
+                        throw new ObstacleException("Stopped!!! There is an obstacle back of me!, Successfully done : " + commandsExecuted);
                     }
                 }
                 case 'l' -> {
@@ -37,7 +37,7 @@ public class MarsRoverImpl implements MarsRover {
                     commandsExecuted.append("r");
                 }
                 default -> {
-                    throw new InvalidCommandException("Invalid Command: " + command);
+                    throw new InvalidCommandException("Invalid Command: " + command + ", Successfully done : " + commandsExecuted);
                 }
 
             }
